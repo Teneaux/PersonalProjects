@@ -30,7 +30,7 @@ public class DamageableObjects : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Ball>())
         {
-            TakeDamage(collision.gameObject.GetComponent<Ball>().Damage);
+            TakeDamage(collision.gameObject.GetComponent<Ball>().GetDamageValue());
         }
     }
 
@@ -41,7 +41,7 @@ public class DamageableObjects : MonoBehaviour
 
     public float HPPercentage()
     {
-        float currentHpPercent = hp / maxHp;
+        float currentHpPercent = (float) hp/maxHp;
         return currentHpPercent;
     }
 }

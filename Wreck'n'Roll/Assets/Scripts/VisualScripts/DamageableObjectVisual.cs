@@ -10,7 +10,7 @@ public class DamageableObjectVisual : MonoBehaviour
 
     private void Awake()
     {
-        damageableObject = this.GetComponentInParent<DamageableObjects>();
+
     }
     void Start()
     {
@@ -20,6 +20,15 @@ public class DamageableObjectVisual : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(damageableObject.HPPercentage());
+        
+        if( damageableObject.HPPercentage() <= .2f)
+        {
+            damagedSpriteRender.sprite = aLotOfDamage;
+        }
+        else if (damageableObject.HPPercentage() <= .7f)
+        {
+            damagedSpriteRender.sprite = aLittleDamage;
+        }
     }
 }

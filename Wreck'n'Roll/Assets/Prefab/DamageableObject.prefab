@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ea72647c24be493ba6f15a9cd2a24ae, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3446245231129917627
@@ -133,6 +133,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ec7754ed9428742878034e3c4d1a59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagedSpriteRender: {fileID: 9023343008581977739}
+  damageableObject: {fileID: 1020869846609949357}
+  aLittleDamage: {fileID: -3869587884501335757, guid: a7649001889d52e4ab80adcc047ac742, type: 3}
+  aLotOfDamage: {fileID: 2410635476541864081, guid: 6018566fd2e4fbf49a15bfe1b21be132, type: 3}
 --- !u!212 &3582323525512553651
 SpriteRenderer:
   m_ObjectHideFlags: 0
