@@ -7,27 +7,28 @@ using UnityEngine;
 public class CannonController : MonoBehaviour
 {
     [SerializeField]
-    private Transform cannonRotation;
+    private Transform cannonRotation; //The local rotation of the Cannon. the fireOrigin is attached to the Cannon Game Object and will rotate with it.
     [SerializeField]
-    private float maxAngle = 30;
-    [SerializeField]
+    private float maxAngle = 30; 
+    [SerializeField] //Max and Min Angle clamp the rotation of the cannon to prevent free spinning.
     private float minAngle = -25;
     [SerializeField]
     private float minForce;
-    [SerializeField]
+    [SerializeField] // Max and Min force are the highest and lowest ranges of force that will be applied to the Cannon shot during the setting power phase.
     private float maxForce;
     [SerializeField]
-    private float oscillationSpeed;
+    private float oscillationSpeed; //The speed at which the cannon barrel rotates
+    private float currentAngle; //The angle at which the cannon was locked, before transitioning into the Setting power phase
     [SerializeField]
-    private float currentAngle;
-    [SerializeField]
-    private float appliedForce;
+    private float appliedForce; //The value at which the power was locked, this is the force applied to the cannonball during the Firing phase
     private float incrementForce = 5f;
     [SerializeField]
-    private CannonStates activeState = CannonStates.Inactive;
-    public Rigidbody2D cannonBall;
+    private CannonStates activeState; // The current state of the Cannon, viewable in the editor for testing
+    public Rigidbody2D cannonBall; //Reference to the Cannonball rigidbody
     [SerializeField]
-    private Transform fireOrigin;
+    private Transform fireOrigin; //Empty Game Object from which the Cannonball instantiates
+    [SerializeField]
+    private float forceMultiplier; //The value that the applied force is multiplied by
     public Rigidbody2D cannonBarrel;
     GameManager manager;
     public enum CannonStates
@@ -37,7 +38,6 @@ public class CannonController : MonoBehaviour
         SettingPower,
         Firing
     }
-
 
     void Start()
     {
@@ -63,7 +63,6 @@ public class CannonController : MonoBehaviour
                 break;
         }
     }
-
     void InactiveCannon()
     {
         //Code for the inactive period goes here. Wait for timer to expire, and then game to start, move to next state.
@@ -106,7 +105,7 @@ public class CannonController : MonoBehaviour
     void FiringCannon()
     {
         Rigidbody2D ball = Instantiate(cannonBall, fireOrigin);
-        ball.AddForce(fireOrigin.right * (appliedForce * 2), ForceMode2D.Impulse);
+        ball.AddForce(fireOrigin.right * (appliedForce * forceMultiplier), ForceMode2D.Impulse);
         Debug.Log("Appled " + appliedForce + "units of Force to Cannonball");
         activeState = CannonStates.Inactive;
     }

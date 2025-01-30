@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD
---- !u!1 &9032569322030091408
-=======
---- !u!1 &2541766587328434553
->>>>>>> DamageableObjects
+--- !u!1 &9189035310018981131
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,66 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD
-  - component: {fileID: 3083005665602353473}
-  - component: {fileID: 3334727845674273114}
-  - component: {fileID: 6549883721261384230}
-  - component: {fileID: 4116254811287953297}
-  - component: {fileID: 5997130516813367581}
+  - component: {fileID: 7232508924894233740}
+  - component: {fileID: 8680470504055359582}
+  - component: {fileID: 3566479363497660690}
+  - component: {fileID: 717191321108605932}
+  - component: {fileID: 3378261202524956901}
   m_Layer: 0
   m_Name: CannonBall
-=======
-  - component: {fileID: 2013179174541900239}
-  - component: {fileID: 7873808185104439003}
-  m_Layer: 0
-  m_Name: CannonballVisual
->>>>>>> DamageableObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
---- !u!4 &3083005665602353473
-=======
---- !u!4 &2013179174541900239
->>>>>>> DamageableObjects
+--- !u!4 &7232508924894233740
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 9032569322030091408}
+  m_GameObject: {fileID: 9189035310018981131}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.02, y: 0.05, z: 0}
-=======
-  m_GameObject: {fileID: 2541766587328434553}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
->>>>>>> DamageableObjects
+  m_LocalPosition: {x: -2.480179, y: 0.20458454, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2716815312102689379}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!212 &3334727845674273114
-=======
---- !u!212 &7873808185104439003
->>>>>>> DamageableObjects
+--- !u!212 &8680470504055359582
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 9032569322030091408}
-=======
-  m_GameObject: {fileID: 2541766587328434553}
->>>>>>> DamageableObjects
+  m_GameObject: {fileID: 9189035310018981131}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -110,11 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-<<<<<<< HEAD
-  m_Color: {r: 0.76699996, g: 0.21744046, b: 0.15800197, a: 1}
-=======
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
->>>>>>> DamageableObjects
+  m_Color: {r: 0.6603774, g: 0.09656461, b: 0.09656461, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -124,81 +90,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
---- !u!114 &6549883721261384230
-MonoBehaviour:
-=======
---- !u!1 &4618508907249423686
-GameObject:
->>>>>>> DamageableObjects
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 9032569322030091408}
-=======
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2716815312102689379}
-  - component: {fileID: 5749924580161460010}
-  - component: {fileID: 8140165805583879108}
-  - component: {fileID: 7453145890502564274}
-  m_Layer: 0
-  m_Name: CannonBall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2716815312102689379
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618508907249423686}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 2.09, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2013179174541900239}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5749924580161460010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4618508907249423686}
->>>>>>> DamageableObjects
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8406a8c0552547a46972f17098066deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-<<<<<<< HEAD
---- !u!50 &4116254811287953297
-=======
-  Damage: 75
-  size: 0
-  ballRigidBody: {fileID: 0}
---- !u!50 &8140165805583879108
->>>>>>> DamageableObjects
+--- !u!50 &3566479363497660690
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 9032569322030091408}
-=======
-  m_GameObject: {fileID: 4618508907249423686}
->>>>>>> DamageableObjects
+  m_GameObject: {fileID: 9189035310018981131}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -206,42 +105,25 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-<<<<<<< HEAD
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-=======
   m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: dee1492e10499374595dd4b9f516e5ad, type: 2}
->>>>>>> DamageableObjects
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-<<<<<<< HEAD
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5997130516813367581
-=======
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0
---- !u!58 &7453145890502564274
->>>>>>> DamageableObjects
+--- !u!58 &717191321108605932
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 9032569322030091408}
-=======
-  m_GameObject: {fileID: 4618508907249423686}
->>>>>>> DamageableObjects
+  m_GameObject: {fileID: 9189035310018981131}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -271,3 +153,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &3378261202524956901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189035310018981131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8406a8c0552547a46972f17098066deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 75
+  size: 0
+  ballRigidBody: {fileID: 3566479363497660690}
