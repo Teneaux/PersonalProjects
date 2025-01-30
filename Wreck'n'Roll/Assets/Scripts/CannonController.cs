@@ -28,7 +28,7 @@ public class CannonController : MonoBehaviour
     public Rigidbody2D cannonBall;
     [SerializeField]
     private Transform fireOrigin;
-
+    public Rigidbody2D cannonBarrel;
     GameManager manager;
     public enum CannonStates
     {
@@ -41,6 +41,7 @@ public class CannonController : MonoBehaviour
 
     void Start()
     {
+        cannonBarrel = GetComponent<Rigidbody2D>();
         InactiveCannon();
     }
 
@@ -98,13 +99,14 @@ public class CannonController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            cannonBarrel.freezeRotation = true;
             activeState = CannonStates.Firing;
         }
     }
     void FiringCannon()
     {
         Rigidbody2D ball = Instantiate(cannonBall, fireOrigin);
-        ball.AddForce(fireOrigin.forward * (appliedForce * 5), ForceMode2D.Impulse);
+        ball.AddForce(fireOrigin.right * (appliedForce * 2), ForceMode2D.Impulse);
         Debug.Log("Appled " + appliedForce + "units of Force to Cannonball");
         activeState = CannonStates.Inactive;
     }
