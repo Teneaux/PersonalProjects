@@ -23,7 +23,11 @@ public class CannonController : MonoBehaviour
     [SerializeField]
     private float appliedForce;
     private float incrementForce = 5f;
-    public CannonStates activeState = CannonStates.Inactive;
+    [SerializeField]
+    private CannonStates activeState = CannonStates.Inactive;
+    public Rigidbody2D cannonBall;
+    [SerializeField]
+    private Transform fireOrigin;
 
     GameManager manager;
     public enum CannonStates
@@ -99,7 +103,10 @@ public class CannonController : MonoBehaviour
     }
     void FiringCannon()
     {
-
+        Rigidbody2D ball = Instantiate(cannonBall, fireOrigin);
+        ball.AddForce(fireOrigin.forward * (appliedForce * 5), ForceMode2D.Impulse);
+        Debug.Log("Appled " + appliedForce + "units of Force to Cannonball");
+        activeState = CannonStates.Inactive;
     }
 }
 
