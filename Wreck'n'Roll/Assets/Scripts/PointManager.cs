@@ -10,6 +10,7 @@ public class PointManager : MonoBehaviour
     [SerializeField] private List<DamageableObjects> damageableObjectInScene = new List<DamageableObjects>();
     [SerializeField] private int currentScore;
     [SerializeField] private int maximumPointAmount;
+    [SerializeField] private int highScore;
 
     public event EventHandler OnCurrentScoreChange;
 
@@ -24,6 +25,8 @@ public class PointManager : MonoBehaviour
         {
             maximumPointAmount += y.MyMaxHP();
         }
+        
+        //make highscore = highscore of this level from previous plays
     }
 
     private void Start()
