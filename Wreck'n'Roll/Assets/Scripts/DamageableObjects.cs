@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class DamageableObjects : MonoBehaviour
@@ -7,6 +8,11 @@ public class DamageableObjects : MonoBehaviour
     [SerializeField] private int hp;
     [SerializeField] private int maxHp;
 
+    public event EventHandler<OnObjectDeathArgs> OnObjectDeath;
+    public class OnObjectDeathArgs : EventArgs
+    {
+        public int maxHpPoints;
+    }
     
     private void Awake()
     {
@@ -23,6 +29,7 @@ public class DamageableObjects : MonoBehaviour
     {
         if (hp <= 0)
         {
+            OnObjectDeath?.Invoke(this, new OnObjectDeathArgs {maxHpPoints = maxHp });
             Destroy(this.gameObject);
         }
     }
@@ -43,5 +50,9 @@ public class DamageableObjects : MonoBehaviour
     {
         float currentHpPercent = (float) hp/maxHp;
         return currentHpPercent;
+    }
+    public int MyMaxHP()
+    {
+        return maxHp;
     }
 }
