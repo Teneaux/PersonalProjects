@@ -5,6 +5,7 @@ public class PointUIScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private PointManager pointManager;
+    [SerializeField] private TMP_Text highScoreText;
     [SerializeField] private TMP_Text currentScoreText;
     [SerializeField] private TMP_Text maximumScoreText;
     void Start()

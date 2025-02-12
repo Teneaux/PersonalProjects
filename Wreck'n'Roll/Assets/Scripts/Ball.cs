@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -6,6 +7,13 @@ public class Ball : MonoBehaviour
     [SerializeField] private float size;
     [SerializeField] private Rigidbody2D ballRigidBody;
 
+    public event EventHandler OnBallDeath;
+
+
+    private void Awake()
+    {
+        PointManager.Instance.AddABall(this);
+    }
     private void Start()
     {
         ballRigidBody = GetComponent<Rigidbody2D>();
@@ -14,7 +22,8 @@ public class Ball : MonoBehaviour
     {
         if (ballRigidBody.linearVelocityX == 0)
         {
-            Destroy(this.gameObject);
+            OnBallDeath?.Invoke(this, EventArgs.Empty);
+            Destroy(this.gameObject);            
         }
     }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 717191321108605932}
   - component: {fileID: 3378261202524956901}
   m_Layer: 0
-  m_Name: CannonBall
+  m_Name: Cannonball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,6 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8406a8c0552547a46972f17098066deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 75
+  Damage: 150
   size: 0
   ballRigidBody: {fileID: 3566479363497660690}
