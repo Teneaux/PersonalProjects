@@ -2,6 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PointManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class PointManager : MonoBehaviour
 
     public static PointManager Instance{get; private set;}
 
-    
+
+    private static string HIGHSCORE_TAG = "HighScore";
     [SerializeField] private List<DamageableObjects> damageableObjectInScene = new List<DamageableObjects>();
     [SerializeField] private int currentScore;
     [SerializeField] private int maximumPointAmount;
@@ -26,6 +28,8 @@ public class PointManager : MonoBehaviour
             Debug.LogError("There is more than one PointManager");
         }
         Instance = this;
+        
+        highScore = PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + HIGHSCORE_TAG);
         
         foreach(DamageableObjects x in FindObjectsByType<DamageableObjects>(FindObjectsSortMode.None))
         {
@@ -62,6 +66,11 @@ public class PointManager : MonoBehaviour
 
     }
 
+    public int GetHighScore()
+    { 
+        return highScore; 
+    }
+
     public void AddABall(Ball ball)
     {
         allBalls.Add(ball);
@@ -73,6 +82,10 @@ public class PointManager : MonoBehaviour
         if (allBalls.Count >= 0) 
         {
             roundEndScreen.SetActive(true);
+            if(PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + HIGHSCORE_TAG) < currentScore)
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + HIGHSCORE_TAG, currentScore);
+            }
         }
     }
 

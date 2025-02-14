@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     private static string BANK_KEY = "bank";
     private static string SCENE_NAME_LEVEL_SELECTION = "LevelSelect";
     private static string SCENE_NAME_HOME_SCREEN = "HomeScreen";
-    private static string SCENE_NAME_TINOS_SCENE = "Tino's Scene";
+    private static string SCENE_NAME_JOES_SCENE = "Joe's Scene";
 
 
     private int wreakageRating;
@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour
     public void Home()
     {
         SceneManager.LoadScene(SCENE_NAME_HOME_SCREEN);
+    }
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(SCENE_NAME_JOES_SCENE);
     }
 
     public void Quit()

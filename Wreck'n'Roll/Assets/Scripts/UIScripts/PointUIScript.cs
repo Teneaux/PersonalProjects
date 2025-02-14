@@ -12,6 +12,7 @@ public class PointUIScript : MonoBehaviour
     {
         maximumScoreText.text = pointManager.GetMaximumPointAmount().ToString();
         pointManager.OnCurrentScoreChange += PointManager_OnCurrentScoreChange;
+        highScoreText.text = pointManager.GetHighScore().ToString();
     }
 
     private void PointManager_OnCurrentScoreChange(object sender, System.EventArgs e)
