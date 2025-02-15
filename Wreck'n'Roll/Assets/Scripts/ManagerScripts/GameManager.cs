@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set;}
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private static string WRECKAGE_RATING_KEY = "wreckageRating";
     private static string BANK_KEY = "bank";
@@ -17,6 +19,11 @@ public class GameManager : MonoBehaviour
     
     void Awake()
     {
+        if (Instance != null)
+        {
+            Debug.Log("There is anotehr instance of GameManager in the Scene");
+        }
+        Instance = this;
         wreakageRating = PlayerPrefs.GetInt(WRECKAGE_RATING_KEY);
         bank = PlayerPrefs.GetInt(BANK_KEY);
     }
@@ -28,7 +35,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateWreakageRating(int score) 
     {
-        PlayerPrefs.SetInt(BANK_KEY, PlayerPrefs.GetInt(WRECKAGE_RATING_KEY) + score);
+        PlayerPrefs.SetInt(WRECKAGE_RATING_KEY, PlayerPrefs.GetInt(WRECKAGE_RATING_KEY) + score);
     }
     public void UpdateBank(int score)
     {

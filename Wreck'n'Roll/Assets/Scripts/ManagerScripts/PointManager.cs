@@ -84,6 +84,10 @@ public class PointManager : MonoBehaviour
             roundEndScreen.SetActive(true);
             if(PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + HIGHSCORE_TAG) < currentScore)
             {
+                int difference;
+                difference = currentScore - PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + HIGHSCORE_TAG);
+                GameManager.Instance.UpdateWreakageRating(difference);
+                GameManager.Instance.UpdateBank(difference);
                 PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + HIGHSCORE_TAG, currentScore);
             }
         }
