@@ -3,8 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set;}
-    
+    public static GameManager Instance { get; private set; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private static string WRECKAGE_RATING_KEY = "wreckageRating";
     private static string BANK_KEY = "bank";
@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     private static string SCENE_NAME_JOES_SCENE = "Joe's Scene";
 
 
-    private int wreakageRating;
-    private int bank;
+    [SerializeField] private int wreakageRating;
+    [SerializeField] private int bank;
     
     
     void Awake()
@@ -40,6 +40,16 @@ public class GameManager : MonoBehaviour
     public void UpdateBank(int score)
     {
         PlayerPrefs.SetInt(BANK_KEY, PlayerPrefs.GetInt(BANK_KEY) + score);
+    }
+
+    public int GetWreakageRating()
+    {
+        return wreakageRating;
+    }
+
+    public int GetBank()
+    {
+        return bank;
     }
 
     public void Play()
