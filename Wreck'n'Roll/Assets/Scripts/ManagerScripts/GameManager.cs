@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -64,7 +65,15 @@ public class GameManager : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.LoadScene(SCENE_NAME_JOES_SCENE);
+        GameObject button = EventSystem.current.currentSelectedGameObject;
+        if (button != null)
+        {
+            SceneManager.LoadScene(button.name);
+        }
+        else
+        {
+            Debug.Log("current Selected Game Object is Null :'(");
+        }
     }
 
     public void Quit()
